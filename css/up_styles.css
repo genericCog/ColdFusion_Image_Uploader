@@ -1,0 +1,320 @@
+        :root {
+            --button-font: normal normal 14px Arial, Sans-Serif;
+            --rgba_white: rgba(255, 255, 255, 1.00);      /*#FFFFFF*/
+            --rgba_blue: rgba(0, 48, 143, 1.00);          /*#00308f*/
+            --rgba_brightblue: rgba(0, 73, 209, 1.00);    /*#0049d1*/
+            --rgba_midnightblue: rgba(0, 73, 209, 1.00);  /*#1d345c*/
+            --rgba_teal: rgba(0, 73, 209, 1.00);          /*#00aef0*/
+            --rgba_maroon: rgba(119, 58, 58, 1.00);       /*#773a3a*/
+            --rgba_cornFblue: rgba(189, 206, 239, 1.00);  /*#BDCEEF*/
+            --rgba_lightmaroon: rgba(199, 156, 157, 1.00);/*#F0F0F0*/
+            --rgba_cornFblue_2: rgba(215, 227, 248, 1.00);/*#F2F5FC*/
+            --rgba_lightgrey: rgba(240, 240, 240, 1.00);  /*#F0F0F0*/
+        }
+
+        /*Custom Modal Box*/
+        /* The Modal (background) */
+        .dialog_modal {
+            /*display: none;  Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 50%;
+            top: 0;
+            width: 300px; /* Full width */
+            height: 400px; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal_content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+        
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+        
+        /* The Close Button */
+        .close_modal {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close_modal:hover,
+        .close_modal:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal_header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+        
+        .modal_body {padding: 2px 16px;}
+        
+        .modal_footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+        /*END Custom Modal Box*/
+        body {
+            background-color: 255, 255, 255, 1.00;/* 255,255,255,1.00 */
+            font: normal normal 16px Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: #A6B6C2;
+        }        
+
+        h2 {
+            color: var(--rgba_white_100);
+            text-align: center;
+        }
+        .hr_gradient {
+            background: linear-gradient(to right, white 0%, #83AC8E 50%, white 100%);
+            border: 0;
+            margin: 1.5em auto;
+            height: 1px;
+            width: 75%;
+        }
+        .hr_gradient {
+            margin-top: -0px;
+        }
+        .clear_both {
+            border: 0px solid blue;
+            width: 100%;
+            height: 4px;
+            margin-top: 4px;
+            clear: both;
+        }
+        .display_none {
+            display: none;
+        }
+        .div_wrapper_main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex_center_column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;            
+        }
+        .flex_center_row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;            
+        }
+        .modern_button {
+            letter-spacing: 0.1px;
+            color: #F2F5FC;
+            text-align: center;
+            text-decoration: none;
+            background-color: #00308F;
+            transition: background-color 0.5s ease, border 0.5s ease;
+            border: 0px solid #BDCEEF;
+            padding: 5px 8px;
+        }
+        .modern_button:hover {
+            background-color: #0049D1;
+            border: 0px solid #D7E3F8;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .modern_button:active {
+            background-color: #062AFC;
+            border: 0px solid #D7E3F8;
+            color: #ffffff;
+        }
+        #lbl_loading {
+            display: none;
+            line-height: 300px;
+            vertical-align: middle;
+        }
+        #lbl_drop_zone {
+            vertical-align: middle;
+        }
+        #lbl_action_drop {
+            line-height: 300px;
+            vertical-align: middle;
+        }
+        .temp_lbl_red, .class_warn_red {
+            color: red;
+        }
+        .temp_lbl_default, .modal_default {
+            text-align: center;
+            color: #A6B6C2;
+        }
+        .class_good_green {
+            color: green;
+        }
+        .class_do_blue {
+            color: blue;
+        }
+        /*Drop Zone and Image Upload Area*/
+
+        .dz_container_normal {
+            border: 2px dashed #dee3e7;
+            border-radius: 3px;
+        }
+        .dz_container_over {
+            border: 2px dashed #939393;
+            border-radius: 3px;
+        }
+        .dz_normal {
+            color: #a6b6c2;
+            background-color: #ECEDEE;
+            transition: background-color 0.5s ease, border 0.5s ease;
+        }
+        .dz_over {
+            color: #939393;
+            background-color: rgba(117, 117, 117, 0.2);
+            transition: background-color 0.5s ease, border 0.5s ease;
+        }
+        #drop_zone_container {
+            width: 216px;
+            height: 346px;
+        }
+        #drop_zone_container:hover {
+            border: 2px dashed #939393;
+        }
+        #image_drop_zone {
+            text-align: center;
+            color: #A6B6C2;
+            font: bold normal 18px Arial, "Helvetica Neue", Helvetica, sans-serif;
+            width: 200px;
+            height: 300px;
+        }
+        #image_drop_zone:hover {
+            color: #a6b6c2;
+            background-color: rgba(117, 117, 117, 0.2);
+            transition: background-color 0.5s ease, border 0.5s ease;
+        }
+        /*custom upload button*/
+
+        .input_select_image {
+            display: none;
+        }
+        .input_select_image+label * {
+            pointer-events: none;
+        }
+        .input_select_image+label {
+            cursor: pointer;
+            display: inline-block;
+            font: var(--button-font);
+            letter-spacing: 0.1px;
+        }
+        #lbl_file_name {
+            font: var(--button-font);
+            letter-spacing: 0.1px;
+        }
+        #lbl_dz_container {
+            clear: both;
+            text-align: center;
+        }
+        /*END custom upload button*/
+
+        .profile_img {
+            width: 200px;
+            height: 300px;
+        }
+        .profile_img img:first-child {
+            border: 1px solid rgba(197, 201, 205, 0.3);
+        }
+        #image_display_container {
+            display: none;
+            border: 0px dashed #D7E3F8;
+            text-align: center;
+            width: 200px;
+            height: 300px;
+            margin-bottom: 4px;
+        }
+        #image_display_container:hover {
+            border: 0px dashed #0049D1;
+            background-color: #D7E3F8;
+            transition: background-color 0.5s ease, border 0.5s ease;
+        }
+        #image_display_container:active {
+            border: 0px dashed rgba(199, 156, 157, 1.00);
+        }
+        #btn_dz_container {
+            background: linear-gradient(to right, #D7D7D7 0%, white 50%, #D7D7D 100%);
+        }
+        #btn_crop_image {
+            margin: 0 2px 0 2px;
+        }
+        #btn_change_image {}
+        #btn_submit_image {}
+        .border_static {
+            border: 4.5px dashed blue;
+        }
+        .border_hover {
+            border: 4.5px dashed lightblue;
+        }
+        .on_drag_over {
+            border: 2px dashed #dee3e7;
+        }
+        .on_drag_leave {
+            border: 2px dashed rgba(102, 102, 102, 0.69);
+        }
+        .on_drag_drop {
+            border: 2px dashed #00308F;
+        }
+        .on_successful_image_upload {
+            border: 2px dashed green;
+        }
+        /*
+        $('#image_drop_zone').css({'border':'1px dashed #0049D1'});
+        $('#image_drop_zone').css({'background-color':'#D7E3F8', 'transition':'background-color 0.5s ease, border 0.5s ease'});
+        */
+
+        /*END Drop Zone*/
+
+        /**/
+
+        #lbl_after_submit {}
+        .lbl_success_text {}
+        .lbl_warning_red {
+            color: red;
+        }
+        .lbl_warning_reset {
+            color: #A6B6C2;
+        }
+        .div_warning_red {
+            background-color: red;
+            transition: background-color 300ms ease, border 300ms ease;
+        }
+        .div_warning_red:hover {
+            background-color: red;
+            transition: background-color 300ms ease, border 300ms ease;
+        }
+        .div_warning_reset {
+            background-color: rgba(229, 229, 229, 0.24);
+            transition: background-color 300ms ease, border 300ms ease;
+        }

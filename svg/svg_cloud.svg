@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Scalable Vector Graphic-->
+<svg version="1.1" 
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"     
+     baseProfile="full">
+
+    <g xmlns="http://www.w3.org/2000/svg">
+        <ellipse fill="#DEE3E7" cx="43.3" cy="73.9" rx="37.6" ry="4.1"/>
+        <g>
+            <path fill="#A6B6C2" d="M69.4,21.5C66.9,9.2,56,0,43,0C32.6,0,23.7,5.8,19.2,14.4C8.4,15.5,0,24.6,0,35.6C0,47.5,9.6,57,21.5,57    h46.6C78,57,86,49,86,39.2C86,29.8,78.6,22.2,69.4,21.5z"/>
+            <polygon fill="#F0F2F4" points="50.2,32.1 50.2,46.3 35.8,46.3 35.8,32.1 25.1,32.1 43,14.3 60.9,32.1   "/>
+        </g>
+    </g>
+</svg>
